@@ -1,6 +1,9 @@
 name: "Terraform Apply Workflow"
 
 on:
+  push:
+    branches:
+      - main
   workflow_call:
     secrets:
       AWS_ACCESS_KEY_ID:
