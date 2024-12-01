@@ -54,9 +54,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -var "accountIdVoclabs=${{ secrets.AWS_ACCOUNT_ID }}"
-
-      - name: Deploy EKS Without ALB
-        run: |
-          kubectl apply -f k8s/fastfood-deployment.yaml
-          kubectl apply -f k8s/fastfood-service.yaml
-          kubectl apply -f k8s/fastfood-hpa.yaml
